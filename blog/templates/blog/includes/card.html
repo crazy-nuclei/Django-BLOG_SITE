@@ -1,0 +1,34 @@
+<style>
+    .card-link:hover {
+        background-color: #5249f1;
+        color: #f4f4f4;
+    }
+
+    .card-link{
+        flex: 1;
+        margin: 0 10px;
+        text-align: center;
+        padding: 15px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        text-decoration: none;
+    }
+
+    .card img {
+        width: 80px;  /* Fixed width for the circular image */
+        height: 80px; /* Fixed height for the circular image */
+        border-radius: 50%; /* Creates the circular shape */
+        object-fit: cover; /* Ensures the image covers the entire circular area */
+        margin-bottom: 10px; /* Spacing below the circular image */
+    }
+</style>
+
+<a href="{% url 'blog-detail' post.slug %}" class="card-link">
+    <div class="card">
+        <img src="https://www.shutterstock.com/image-photo/bloggingblog-concepts-ideas-white-worktable-600nw-1029506242.jpg" alt="Card Image 1">
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.excerpt}}</p>
+    </div>
+</a>

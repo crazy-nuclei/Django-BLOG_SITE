@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %} {{post.title}} {% endblock %}
+
+{% block styles %} 
+    <style>
+
+        .full-page {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .full-page img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .full-page h1 {
+            margin: 20px 0;
+            color: #2e289f;
+        }
+
+        .full-page p {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+    </style>
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="full-page">
+        <!-- Image at the top -->
+        <img src="https://media.istockphoto.com/id/922745190/photo/blogging-blog-concepts-ideas-with-worktable.jpg?s=612x612&w=0&k=20&c=xR2vOmtg-N6Lo6_I269SoM5PXEVRxlgvKxXUBMeMC_A=" alt="Sample Image">
+
+        <!-- Title below the image -->
+        <h1>{{post.title}}</h1>
+
+        <!-- Description below the title -->
+        <p>{{post.content}}</p>
+    </div>
+{% endblock %}

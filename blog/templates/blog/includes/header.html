@@ -1,0 +1,36 @@
+<style>
+
+    /* Header styles */
+    .header {
+        background-color: #2e289f; /* Same color as the dark-section */
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .header a {
+        background-color: #2e289f; /* Same color as the header */
+        color: #fff;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+    }
+
+    .header a:hover {
+        background-color: #423aa8; /* Slightly darker shade on hover */
+    }
+
+</style>
+
+
+<div class="header">
+    <!-- Button on the extreme left -->
+    <a href="{% url 'index' %}">AA</a>
+    <!-- Button on the extreme right -->
+    <a href="{% url 'all-posts' %}">All Blogs</a>
+</div>

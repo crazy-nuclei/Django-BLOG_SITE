@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %} Home Page {% endblock %}
+
+{% block styles %} 
+    <style>
+
+        .allBlogs-header {
+            text-align: center;
+            background-color: #2e289f;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+    </style>
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="allBlogs-header">
+        <h1>My Collection</h1>
+    </div>
+
+    <div class="card-grid">
+        
+        {% for post in posts %}
+            {% include "blog/includes/card.html" %}
+        {% endfor %}
+
+    </div>
+{% endblock %}
